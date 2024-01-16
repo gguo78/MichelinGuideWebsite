@@ -1,0 +1,42 @@
+[Michelin_us_processed_subcat.csv]
+Name: name of the restaurant
+Address: address of the restaurant
+Zip: zip code of the restaurant (extracted from address using Regex)
+Location: City of the restaurant
+MinPrice: minimum price point for the restaurant
+MaxPrice: maximum price point for the restaurant
+Currency: currency of price
+Cuisine: cuisine focus of the restaurant (e.g. Japanese, Sushi)
+General_Category: general cuisine category for the restaurant (e.g. Japanese)
+Sub_Category: sub category under the general cuisine category for the restaurant (e.g. Sushi)
+Longitude: Longitude of the restaurant
+Latitude: Latitude of the restaurant
+PhoneNumber: phone number of the restaurant
+Url: Michelin URL for the restaurant
+WebsiteUrl: restaurant website URL
+Award: Michelin award for the restaurant
+AeveragePrice: average price point for the restaurant
+state_id: abbreviation of the state (e.g. NY) of the restaurant (result of join with uscities.csv)
+state_name: state name (e.g. New York) of the restaurant (result of join with uscities.csv)
+
+
+[YELP.Restaurants.MA.csv]
+Restaurant_name: restaurant name (Categorical)
+Restaurant_ID: unique ID of the restaurant (Categorical)
+Restaurant_address: address of the restaurant (Categorical) 
+Restaurant_tag: (cuisine) type of the restaurant (Categorical) 
+Needs cleaning because some of the restaurant records do not contain a cuisine type and are simply listed as “Restaurants,”
+Rating: rating of the restaurant (Ordinal)  
+Price:price category of the restaurant, e.g. $, $$, $$$, $$$$ (Ordinal)
+Review_number: number of reviews written for the restaurant (Quantitative)
+We can use this as a metric of measuring popularity of the restaurant relative to the Boston area
+Restaurant_neighborhood: the neighborhood (in Boston) that the restaurant belongs to (Categorical)
+Lat: latitude of the restaurant (Quantitative)
+Lon: longitude of the restaurant (Quantitative)
+(other features are not relevant to our project)
+
+
+[MBTA-Lines.json]
+"features": GIS data contains geometry for each transit line of MBTA.
+"geometry": Contains coordiantes of transit lines
+"coordinates": Lat and Long coordinates
